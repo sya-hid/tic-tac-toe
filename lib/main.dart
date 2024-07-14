@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -227,7 +226,7 @@ class _TicTacToeState extends State<TicTacToe> {
                                   xs.any((element) =>
                                       element['x'] == 2 &&
                                       element['y'] == 0))) {
-                            menang('x');
+                            menang('X');
                           }
                         }
                         if (os.length == 3) {
@@ -251,7 +250,7 @@ class _TicTacToeState extends State<TicTacToe> {
                                   os.any((element) =>
                                       element['x'] == 2 &&
                                       element['y'] == 0))) {
-                            menang('o');
+                            menang('O');
                           }
                         }
 
@@ -275,10 +274,10 @@ class _TicTacToeState extends State<TicTacToe> {
                           child: Text(
                         xs.any((element) =>
                                 element.toString() == position.toString())
-                            ? 'x'
+                            ? 'X'
                             : os.any((element) =>
                                     element.toString() == position.toString())
-                                ? 'o'
+                                ? 'O'
                                 : '',
                         style: TextStyle(
                           fontSize: 48,
